@@ -500,6 +500,13 @@ body {
     font-weight: 500;
 }
 
+.qr-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
 .contact-qr p {
     color: var(--gray-dark);
     font-size: 1rem;
