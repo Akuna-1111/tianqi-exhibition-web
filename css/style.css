@@ -252,10 +252,7 @@ body {
 }
 
 .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 50px;
+    /* 网格布局现在由.carousel-slide.active控制 */
 }
 
 .partner-logo {
@@ -304,6 +301,84 @@ body {
 .partners-container {
     position: relative;
     min-height: 400px;
+}
+
+/* 合作伙伴轮播容器 */
+.partners-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partners-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.carousel-slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/* 轮播按钮 */
+.carousel-btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 2px solid var(--gray-light);
+    color: var(--gray-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border-color: var(--primary-red);
+    transform: scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.carousel-btn:disabled:hover {
+    background-color: var(--white);
+    color: var(--gray-dark);
+    border-color: var(--gray-light);
 }
 
 /* 合作伙伴logo图片样式 */
@@ -532,7 +607,7 @@ body {
         font-size: 2.8rem;
     }
 
-    .partners-grid {
+    .carousel-slide {
         grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -592,8 +667,17 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .partners-grid {
+    .carousel-slide {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 在移动设备上隐藏轮播箭头 */
+    .carousel-btn {
+        display: none;
+    }
+
+    .partners-carousel-wrapper {
+        gap: 0;
     }
 
     .qualifications-grid {
@@ -615,7 +699,7 @@ body {
         font-size: 1.8rem;
     }
 
-    .partners-grid {
+    .carousel-slide {
         grid-template-columns: 1fr;
     }
 

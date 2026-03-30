@@ -80,51 +80,61 @@
             <h2 class="section-title">合作伙伴</h2>
             <p class="section-subtitle">与众多知名品牌和企业建立长期合作关系</p>
             <div class="partners-container">
-                <div class="partners-grid" id="partnersPage1">
-                    <!-- 第1页：品牌1-12 -->
-                    <div class="partner-logo"><img src="images/logos/logo-01.png" alt="合作伙伴1" title="合作伙伴1"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-02.png" alt="合作伙伴2" title="合作伙伴2"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-03.png" alt="合作伙伴3" title="合作伙伴3"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-04.png" alt="合作伙伴4" title="合作伙伴4"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-05.png" alt="合作伙伴5" title="合作伙伴5"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-06.png" alt="合作伙伴6" title="合作伙伴6"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-07.png" alt="合作伙伴7" title="合作伙伴7"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-08.png" alt="合作伙伴8" title="合作伙伴8"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-09.png" alt="合作伙伴9" title="合作伙伴9"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-10.png" alt="合作伙伴10" title="合作伙伴10"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-11.png" alt="合作伙伴11" title="合作伙伴11"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-12.png" alt="合作伙伴12" title="合作伙伴12"></div>
-                </div>
-                <div class="partners-grid" id="partnersPage2" style="display:none;">
-                    <!-- 第2页：品牌13-24 -->
-                    <div class="partner-logo"><img src="images/logos/logo-13.png" alt="合作伙伴13" title="合作伙伴13"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-14.png" alt="合作伙伴14" title="合作伙伴14"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-15.png" alt="合作伙伴15" title="合作伙伴15"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-16.png" alt="合作伙伴16" title="合作伙伴16"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-17.png" alt="合作伙伴17" title="合作伙伴17"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-18.png" alt="合作伙伴18" title="合作伙伴18"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-19.png" alt="合作伙伴19" title="合作伙伴19"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-20.png" alt="合作伙伴20" title="合作伙伴20"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-21.png" alt="合作伙伴21" title="合作伙伴21"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-22.png" alt="合作伙伴22" title="合作伙伴22"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-23.png" alt="合作伙伴23" title="合作伙伴23"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-24.png" alt="合作伙伴24" title="合作伙伴24"></div>
-                </div>
-                <div class="partners-grid" id="partnersPage3" style="display:none;">
-                    <!-- 第3页：品牌25-30 -->
-                    <div class="partner-logo"><img src="images/logos/logo-25.png" alt="合作伙伴25" title="合作伙伴25"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-26.png" alt="合作伙伴26" title="合作伙伴26"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-27.png" alt="合作伙伴27" title="合作伙伴27"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-28.png" alt="合作伙伴28" title="合作伙伴28"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-29.png" alt="合作伙伴29" title="合作伙伴29"></div>
-                    <div class="partner-logo"><img src="images/logos/logo-30.png" alt="合作伙伴30" title="合作伙伴30"></div>
-                    <!-- 预留空位保持布局一致 -->
-                    <div class="partner-logo empty"></div>
-                    <div class="partner-logo empty"></div>
-                    <div class="partner-logo empty"></div>
-                    <div class="partner-logo empty"></div>
-                    <div class="partner-logo empty"></div>
-                    <div class="partner-logo empty"></div>
+                <div class="partners-carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" aria-label="上一页">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="partners-carousel">
+                        <div class="partners-grid carousel-slide active" data-slide="1">
+                            <!-- 第1页：品牌1-12 -->
+                            <div class="partner-logo"><img src="images/logos/logo-01.png" alt="合作伙伴1" title="合作伙伴1"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-02.png" alt="合作伙伴2" title="合作伙伴2"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-03.png" alt="合作伙伴3" title="合作伙伴3"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-04.png" alt="合作伙伴4" title="合作伙伴4"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-05.png" alt="合作伙伴5" title="合作伙伴5"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-06.png" alt="合作伙伴6" title="合作伙伴6"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-07.png" alt="合作伙伴7" title="合作伙伴7"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-08.png" alt="合作伙伴8" title="合作伙伴8"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-09.png" alt="合作伙伴9" title="合作伙伴9"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-10.png" alt="合作伙伴10" title="合作伙伴10"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-11.png" alt="合作伙伴11" title="合作伙伴11"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-12.png" alt="合作伙伴12" title="合作伙伴12"></div>
+                        </div>
+                        <div class="partners-grid carousel-slide" data-slide="2">
+                            <!-- 第2页：品牌13-24 -->
+                            <div class="partner-logo"><img src="images/logos/logo-13.png" alt="合作伙伴13" title="合作伙伴13"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-14.png" alt="合作伙伴14" title="合作伙伴14"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-15.png" alt="合作伙伴15" title="合作伙伴15"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-16.png" alt="合作伙伴16" title="合作伙伴16"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-17.png" alt="合作伙伴17" title="合作伙伴17"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-18.png" alt="合作伙伴18" title="合作伙伴18"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-19.png" alt="合作伙伴19" title="合作伙伴19"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-20.png" alt="合作伙伴20" title="合作伙伴20"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-21.png" alt="合作伙伴21" title="合作伙伴21"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-22.png" alt="合作伙伴22" title="合作伙伴22"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-23.png" alt="合作伙伴23" title="合作伙伴23"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-24.png" alt="合作伙伴24" title="合作伙伴24"></div>
+                        </div>
+                        <div class="partners-grid carousel-slide" data-slide="3">
+                            <!-- 第3页：品牌25-30 -->
+                            <div class="partner-logo"><img src="images/logos/logo-25.png" alt="合作伙伴25" title="合作伙伴25"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-26.png" alt="合作伙伴26" title="合作伙伴26"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-27.png" alt="合作伙伴27" title="合作伙伴27"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-28.png" alt="合作伙伴28" title="合作伙伴28"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-29.png" alt="合作伙伴29" title="合作伙伴29"></div>
+                            <div class="partner-logo"><img src="images/logos/logo-30.png" alt="合作伙伴30" title="合作伙伴30"></div>
+                            <!-- 预留空位保持布局一致 -->
+                            <div class="partner-logo empty"></div>
+                            <div class="partner-logo empty"></div>
+                            <div class="partner-logo empty"></div>
+                            <div class="partner-logo empty"></div>
+                            <div class="partner-logo empty"></div>
+                            <div class="partner-logo empty"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" aria-label="下一页">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
             <div class="partners-pagination">
@@ -241,7 +251,7 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 专业展览设计搭建服务公司. 保留所有权利.</p>
+            <p>&copy; 2025 厦门天其展览服务有限公司. 保留所有权利.</p>
             <p>沪ICP备12345678号</p>
         </div>
     </footer>
