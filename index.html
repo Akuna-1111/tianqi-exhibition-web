@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>专业展览设计搭建服务公司</title>
+    <title>厦门天其展览服务公司</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,15 +15,22 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <span class="logo-text">TECHNICS<span class="logo-highlight">EXHIBITION</span></span>
+                    <img src="images/logo.png" alt="天其展览 Logo" class="logo-img">
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#intro">企业简介</a></li>
+                    <li><a href="#intro">公司简介</a></li>
                     <li><a href="#partners">合作伙伴</a></li>
                     <li><a href="#qualifications">资质荣誉</a></li>
                     <li><a href="#projects">项目案例</a></li>
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="搜索..." class="search-input">
+                    <button class="search-btn" aria-label="搜索">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="#contact" class="btn btn-primary nav-btn">获取方案</a>
                 <button class="menu-toggle" id="menuToggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -31,26 +38,125 @@
         </div>
     </header>
 
-    <!-- 英雄横幅 -->
-    <section class="hero">
+
+    <!-- 近期业务活动轮播 -->
+    <section class="section news-carousel-section">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">专业展览设计搭建服务</h1>
-                <p class="hero-subtitle">创意设计 · 精湛工艺 · 全程服务 · 卓越体验</p>
-                <a href="#contact" class="btn btn-primary">获取方案</a>
+            <div class="news-carousel-wrapper">
+                <button class="news-carousel-btn news-prev" aria-label="上一张">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="news-carousel">
+                    <div class="news-slide active">
+                        <img src="images/news-1.jpg" alt="2024上海国际展会项目" class="news-image">
+                        <div class="news-caption">
+                            <h3>2024上海国际展会项目</h3>
+                            <p>成功完成2024上海国际展会大型展台设计与搭建</p>
+                        </div>
+                    </div>
+                    <div class="news-slide">
+                        <img src="images/news-2.jpg" alt="企业展厅设计项目" class="news-image">
+                        <div class="news-caption">
+                            <h3>企业展厅设计项目</h3>
+                            <p>为知名企业打造现代化品牌展厅，展示企业形象</p>
+                        </div>
+                    </div>
+                    <div class="news-slide">
+                        <img src="images/news-3.jpg" alt="公益宣传活动" class="news-image">
+                        <div class="news-caption">
+                            <h3>公益宣传活动</h3>
+                            <p>参与城市公益宣传展览，传播社会正能量</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="news-carousel-btn news-next" aria-label="下一张">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="news-pagination">
+                <span class="news-dot active" data-slide="1"></span>
+                <span class="news-dot" data-slide="2"></span>
+                <span class="news-dot" data-slide="3"></span>
+            </div>
+            <div class="news-more">
+                <a href="activities.html" class="btn btn-outline btn-sm">查看更多活动 <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- 企业简介 -->
+    <!-- 优势亮点 -->
+    <section class="section advantages-section" id="advantages">
+        <div class="container">
+            <h2 class="section-title">优势亮点</h2>
+            <p class="section-subtitle">我们的核心优势，为您创造更多价值</p>
+            <div class="advantages-container">
+                <div class="advantage-item">
+                    <div class="advantage-circle" data-size="large">
+                        <div class="circle-content">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>创新设计</h3>
+                        </div>
+                    </div>
+                    <p class="advantage-description">独特创意，量身定制</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-circle" data-size="medium">
+                        <div class="circle-content">
+                            <i class="fas fa-users"></i>
+                            <h3>专业团队</h3>
+                        </div>
+                    </div>
+                    <p class="advantage-description">经验丰富，技术精湛</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-circle" data-size="small">
+                        <div class="circle-content">
+                            <i class="fas fa-cogs"></i>
+                            <h3>先进技术</h3>
+                        </div>
+                    </div>
+                    <p class="advantage-description">领先工艺，品质保证</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-circle" data-size="medium">
+                        <div class="circle-content">
+                            <i class="fas fa-calendar-check"></i>
+                            <h3>全程服务</h3>
+                        </div>
+                    </div>
+                    <p class="advantage-description">从设计到搭建，一站式服务</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-circle" data-size="large">
+                        <div class="circle-content">
+                            <i class="fas fa-medal"></i>
+                            <h3>品质保证</h3>
+                        </div>
+                    </div>
+                    <p class="advantage-description">严格把控，卓越品质</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-circle" data-size="small">
+                        <div class="circle-content">
+                            <i class="fas fa-handshake"></i>
+                            <h3>客户至上</h3>
+                        </div>
+                    </div>
+                    <p class="advantage-description">用心服务，客户满意</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司简介 -->
     <section class="section intro-section" id="intro">
         <div class="container">
-            <h2 class="section-title">企业简介</h2>
+            <h2 class="section-title">公司简介</h2>
             <div class="intro-content">
                 <div class="intro-text">
-                    <p>我们是一家专注于展览设计搭建的专业服务公司，拥有超过20年的行业经验。致力于为客户提供从概念设计到现场搭建的一站式解决方案。</p>
-                    <p>公司汇聚了一支富有创意和实战经验的设计师与工程师团队，擅长将品牌理念与空间艺术完美结合，创造令人难忘的展览体验。</p>
-                    <p>我们服务范围涵盖大型展会、企业展厅、党政馆、主题馆、纪念馆、体验馆、公益宣传、商业活动等多个领域，已成功为数百家客户提供专业服务。</p>
+                    <p>厦门天其展览是一家专业的展览策划设计搭建服务一体化的公司，拥有20多年的行业经验，致力于为客户提供创意设计、精湛工艺和全程服务。我们专注于展览展台设计、企业展厅建设、博物馆陈列、活动舞台搭建等领域，凭借卓越的技术实力和丰富的项目经验，赢得了众多知名企业的信任与合作。</p>
+                    <p>公司始终坚持“客户至上、质量第一”的原则，以创新的设计理念和专业的施工团队，确保每一个项目都能完美呈现客户的需求与品牌形象。我们的服务覆盖全国，成功完成了500多个展览项目，与200多家企业建立了长期合作关系。</p>
+                    <p>未来，我们将继续秉承专业、创新、诚信的服务理念，为客户创造更多价值，成为展览行业值得信赖的合作伙伴。</p>
                 </div>
                 <div class="intro-stats">
                     <div class="stat-item">
@@ -79,68 +185,35 @@
         <div class="container">
             <h2 class="section-title">合作伙伴</h2>
             <p class="section-subtitle">与众多知名品牌和企业建立长期合作关系</p>
-            <div class="partners-container">
-                <div class="partners-carousel-wrapper">
-                    <button class="carousel-btn carousel-prev" aria-label="上一页">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="partners-carousel">
-                        <div class="partners-grid carousel-slide active" data-slide="1">
-                            <!-- 第1页：品牌1-12 -->
-                            <div class="partner-logo"><img src="images/logos/logo-01.png" alt="合作伙伴1" title="合作伙伴1"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-02.png" alt="合作伙伴2" title="合作伙伴2"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-03.png" alt="合作伙伴3" title="合作伙伴3"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-04.png" alt="合作伙伴4" title="合作伙伴4"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-05.png" alt="合作伙伴5" title="合作伙伴5"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-06.png" alt="合作伙伴6" title="合作伙伴6"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-07.png" alt="合作伙伴7" title="合作伙伴7"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-08.png" alt="合作伙伴8" title="合作伙伴8"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-09.png" alt="合作伙伴9" title="合作伙伴9"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-10.png" alt="合作伙伴10" title="合作伙伴10"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-11.png" alt="合作伙伴11" title="合作伙伴11"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-12.png" alt="合作伙伴12" title="合作伙伴12"></div>
-                        </div>
-                        <div class="partners-grid carousel-slide" data-slide="2">
-                            <!-- 第2页：品牌13-24 -->
-                            <div class="partner-logo"><img src="images/logos/logo-13.png" alt="合作伙伴13" title="合作伙伴13"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-14.png" alt="合作伙伴14" title="合作伙伴14"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-15.png" alt="合作伙伴15" title="合作伙伴15"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-16.png" alt="合作伙伴16" title="合作伙伴16"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-17.png" alt="合作伙伴17" title="合作伙伴17"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-18.png" alt="合作伙伴18" title="合作伙伴18"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-19.png" alt="合作伙伴19" title="合作伙伴19"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-20.png" alt="合作伙伴20" title="合作伙伴20"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-21.png" alt="合作伙伴21" title="合作伙伴21"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-22.png" alt="合作伙伴22" title="合作伙伴22"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-23.png" alt="合作伙伴23" title="合作伙伴23"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-24.png" alt="合作伙伴24" title="合作伙伴24"></div>
-                        </div>
-                        <div class="partners-grid carousel-slide" data-slide="3">
-                            <!-- 第3页：品牌25-30 -->
-                            <div class="partner-logo"><img src="images/logos/logo-25.png" alt="合作伙伴25" title="合作伙伴25"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-26.png" alt="合作伙伴26" title="合作伙伴26"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-27.png" alt="合作伙伴27" title="合作伙伴27"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-28.png" alt="合作伙伴28" title="合作伙伴28"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-29.png" alt="合作伙伴29" title="合作伙伴29"></div>
-                            <div class="partner-logo"><img src="images/logos/logo-30.png" alt="合作伙伴30" title="合作伙伴30"></div>
-                            <!-- 预留空位保持布局一致 -->
-                            <div class="partner-logo empty"></div>
-                            <div class="partner-logo empty"></div>
-                            <div class="partner-logo empty"></div>
-                            <div class="partner-logo empty"></div>
-                            <div class="partner-logo empty"></div>
-                            <div class="partner-logo empty"></div>
-                        </div>
-                    </div>
-                    <button class="carousel-btn carousel-next" aria-label="下一页">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="partners-pagination">
-                <span class="page-dot active" data-page="1"></span>
-                <span class="page-dot" data-page="2"></span>
-                <span class="page-dot" data-page="3"></span>
+            <div class="partners-grid">
+                <!-- 6列3行，共18个合作伙伴 -->
+                <div class="partner-logo"><img src="images/logos/logo-01.png" alt="合作伙伴1" title="合作伙伴1"></div>
+                <div class="partner-logo"><img src="images/logos/logo-02.png" alt="合作伙伴2" title="合作伙伴2"></div>
+                <div class="partner-logo"><img src="images/logos/logo-03.png" alt="合作伙伴3" title="合作伙伴3"></div>
+                <div class="partner-logo"><img src="images/logos/logo-04.png" alt="合作伙伴4" title="合作伙伴4"></div>
+                <div class="partner-logo"><img src="images/logos/logo-05.png" alt="合作伙伴5" title="合作伙伴5"></div>
+                <div class="partner-logo"><img src="images/logos/logo-06.png" alt="合作伙伴6" title="合作伙伴6"></div>
+                <div class="partner-logo"><img src="images/logos/logo-07.png" alt="合作伙伴7" title="合作伙伴7"></div>
+                <div class="partner-logo"><img src="images/logos/logo-08.png" alt="合作伙伴8" title="合作伙伴8"></div>
+                <div class="partner-logo"><img src="images/logos/logo-09.png" alt="合作伙伴9" title="合作伙伴9"></div>
+                <div class="partner-logo"><img src="images/logos/logo-10.png" alt="合作伙伴10" title="合作伙伴10"></div>
+                <div class="partner-logo"><img src="images/logos/logo-11.png" alt="合作伙伴11" title="合作伙伴11"></div>
+                <div class="partner-logo"><img src="images/logos/logo-12.png" alt="合作伙伴12" title="合作伙伴12"></div>
+                <div class="partner-logo"><img src="images/logos/logo-13.png" alt="合作伙伴13" title="合作伙伴13"></div>
+                <div class="partner-logo"><img src="images/logos/logo-14.png" alt="合作伙伴14" title="合作伙伴14"></div>
+                <div class="partner-logo"><img src="images/logos/logo-15.png" alt="合作伙伴15" title="合作伙伴15"></div>
+                <div class="partner-logo"><img src="images/logos/logo-16.png" alt="合作伙伴16" title="合作伙伴16"></div>
+                <div class="partner-logo"><img src="images/logos/logo-17.png" alt="合作伙伴17" title="合作伙伴17"></div>
+                <div class="partner-logo"><img src="images/logos/logo-18.png" alt="合作伙伴18" title="合作伙伴18"></div>
+                <div class="partner-logo"><img src="images/logos/logo-19.png" alt="合作伙伴19" title="合作伙伴19"></div>
+                <div class="partner-logo"><img src="images/logos/logo-20.png" alt="合作伙伴20" title="合作伙伴20"></div>
+                <div class="partner-logo"><img src="images/logos/logo-21.png" alt="合作伙伴21" title="合作伙伴21"></div>
+                <div class="partner-logo"><img src="images/logos/logo-22.png" alt="合作伙伴22" title="合作伙伴22"></div>
+                <div class="partner-logo"><img src="images/logos/logo-23.png" alt="合作伙伴23" title="合作伙伴23"></div>
+                <div class="partner-logo"><img src="images/logos/logo-24.png" alt="合作伙伴24" title="合作伙伴24"></div>
+                <div class="partner-logo"><img src="images/logos/logo-25.png" alt="合作伙伴25" title="合作伙伴25"></div>
+                <div class="partner-logo"><img src="images/logos/logo-26.png" alt="合作伙伴26" title="合作伙伴26"></div>
+                <div class="partner-logo"><img src="images/logos/logo-27.png" alt="合作伙伴27" title="合作伙伴27"></div>
             </div>
         </div>
     </section>
@@ -151,32 +224,40 @@
             <h2 class="section-title">资质与荣誉</h2>
             <div class="qualifications-grid">
                 <div class="qualification-card">
-                    <div class="qualification-icon">
-                        <i class="fas fa-award"></i>
+                    <div class="qualification-image">
+                        <img src="images/qualifications/cert-1.jpg" alt="展览室内外装修设计与施工一体化一级资质">
                     </div>
-                    <h3>展览室内外装修设计与施工一体化</h3>
-                    <p>一级</p>
+                    <div class="qualification-content">
+                        <h3>展览室内外装修设计与施工一体化</h3>
+                        <p>一级</p>
+                    </div>
                 </div>
                 <div class="qualification-card">
-                    <div class="qualification-icon">
-                        <i class="fas fa-medal"></i>
+                    <div class="qualification-image">
+                        <img src="images/qualifications/cert-2.jpg" alt="厦门市会展设计搭建工程企业资质AAA级">
                     </div>
-                    <h3>厦门市会展设计搭建工程企业资质</h3>
-                    <p>（AAA级）</p>
+                    <div class="qualification-content">
+                        <h3>厦门市会展设计搭建工程企业资质</h3>
+                        <p>（AAA级）</p>
+                    </div>
                 </div>
                 <div class="qualification-card">
-                    <div class="qualification-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="qualification-image">
+                        <img src="images/qualifications/cert-3.jpg" alt="厦门市会员展览业协会第二届理事会常务理事单位">
                     </div>
-                    <h3>厦门市会员展览业协会第二届理事会</h3>
-                    <p>常务理事单位</p>
+                    <div class="qualification-content">
+                        <h3>厦门市会员展览业协会第二届理事会</h3>
+                        <p>常务理事单位</p>
+                    </div>
                 </div>
                 <div class="qualification-card">
-                    <div class="qualification-icon">
-                        <i class="fas fa-trophy"></i>
+                    <div class="qualification-image">
+                        <img src="images/qualifications/cert-4.jpg" alt="全国展览展示工程整合排名50强企业">
                     </div>
-                    <h3>全国展览展示工程整合排名</h3>
-                    <p>50强企业</p>
+                    <div class="qualification-content">
+                        <h3>全国展览展示工程整合排名</h3>
+                        <p>50强企业</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,34 +269,60 @@
             <h2 class="section-title">项目案例</h2>
             <p class="section-subtitle">精选部分成功案例展示</p>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background-color: #f0f0f0;">国际汽车展</div>
-                    <div class="project-info">
-                        <h3>2023上海国际汽车展</h3>
-                        <p>为知名汽车品牌设计搭建2000㎡展台，融合科技与艺术元素</p>
+                <a href="project1.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #f0f0f0;">国际汽车展</div>
+                        <div class="project-info">
+                            <h3>2023上海国际汽车展</h3>
+                            <p>为知名汽车品牌设计搭建2000㎡展台，融合科技与艺术元素</p>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-color: #f0f0f0;">科技产品发布会</div>
-                    <div class="project-info">
-                        <h3>全球科技峰会</h3>
-                        <p>为科技公司打造沉浸式产品发布舞台，运用全息投影技术</p>
+                </a>
+                <a href="project2.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #f0f0f0;">科技产品发布会</div>
+                        <div class="project-info">
+                            <h3>全球科技峰会</h3>
+                            <p>为科技公司打造沉浸式产品发布舞台，运用全息投影技术</p>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-color: #f0f0f0;">企业展厅</div>
-                    <div class="project-info">
-                        <h3>集团品牌展厅</h3>
-                        <p>设计建造1000㎡企业品牌展厅，展现企业发展历程与成就</p>
+                </a>
+                <a href="project3.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #f0f0f0;">企业展厅</div>
+                        <div class="project-info">
+                            <h3>集团品牌展厅</h3>
+                            <p>设计建造1000㎡企业品牌展厅，展现企业发展历程与成就</p>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-color: #f0f0f0;">博物馆陈列</div>
-                    <div class="project-info">
-                        <h3>历史文化博物馆</h3>
-                        <p>策划设计博物馆常设展览，运用多媒体交互技术增强体验</p>
+                </a>
+                <a href="project4.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #f0f0f0;">博物馆陈列</div>
+                        <div class="project-info">
+                            <h3>历史文化博物馆</h3>
+                            <p>策划设计博物馆常设展览，运用多媒体交互技术增强体验</p>
+                        </div>
                     </div>
-                </div>
+                </a>
+                <a href="project5.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #f0f0f0;">党政馆设计</div>
+                        <div class="project-info">
+                            <h3>党政主题教育馆</h3>
+                            <p>设计建设党政主题教育展厅，融合现代科技与传统元素</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="project6.html" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-image" style="background-color: #f0f0f0;">主题馆体验</div>
+                        <div class="project-info">
+                            <h3>科技创新主题馆</h3>
+                            <p>打造互动式科技主题体验馆，运用VR/AR技术增强参观体验</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -247,6 +354,71 @@
             </div>
         </div>
     </section>
+
+    <!-- 右侧浮动按钮组 -->
+    <div class="floating-buttons">
+        <a href="#contact" class="floating-btn contact-btn" id="contactBtn">
+            <i class="fas fa-envelope"></i>
+            <span>联系我们</span>
+        </a>
+        <button class="floating-btn cooperation-btn" id="cooperationBtn">
+            <i class="fas fa-handshake"></i>
+            <span>意向合作</span>
+        </button>
+        <a href="#" class="floating-btn back-to-top-btn" id="backToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+            <span>返回顶部</span>
+        </a>
+    </div>
+
+    <!-- 意向合作模态框 -->
+    <div class="modal-overlay" id="cooperationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>意向合作登记</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="cooperationForm">
+                    <div class="form-group">
+                        <label for="company">公司名称 *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">联系人 *</label>
+                        <input type="text" id="contact" name="contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">联系电话 *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">电子邮箱 *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectType">项目类型</label>
+                        <select id="projectType" name="projectType">
+                            <option value="">请选择</option>
+                            <option value="exhibition">展览展台设计</option>
+                            <option value="showroom">企业展厅</option>
+                            <option value="museum">博物馆陈列</option>
+                            <option value="event">活动舞台搭建</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">合作意向描述</label>
+                        <textarea id="message" name="message" rows="4" placeholder="请简要描述您的需求..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">提交意向</button>
+                        <button type="button" class="btn btn-outline" id="cancelBtn">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- 页脚 -->
     <footer class="footer">

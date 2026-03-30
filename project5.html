@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>党政主题教育馆 - 天其展览</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail { padding: 80px 0; }
+        .project-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('../images/project5-hero.jpg');
+            background-size: cover; background-position: center; color: white; padding: 100px 0; text-align: center; margin-bottom: 50px;
+        }
+        .project-hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .project-hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        .project-content { display: flex; flex-wrap: wrap; gap: 50px; margin-top: 50px; }
+        .project-info { flex: 1; min-width: 300px; }
+        .project-sidebar { flex: 0 0 300px; position: sticky; top: 100px; height: fit-content; }
+        .project-section { margin-bottom: 40px; }
+        .project-section h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--black); border-left: 4px solid var(--primary-red); padding-left: 15px; }
+        .project-section p { line-height: 1.8; color: var(--gray-dark); margin-bottom: 20px; }
+        .project-image { width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .back-to-top {
+            position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background-color: var(--primary-red); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; z-index: 1000;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3); transition: all 0.3s ease; display: none;
+        }
+        .back-to-top:hover { background-color: var(--dark-red); transform: translateY(-5px); }
+        .btn-back { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="天其展览 Logo" class="logo-img"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html#intro">企业简介</a></li>
+                    <li><a href="index.html#partners">合作伙伴</a></li>
+                    <li><a href="index.html#qualifications">资质荣誉</a></li>
+                    <li><a href="index.html#projects">项目案例</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="搜索..." class="search-input">
+                    <button class="search-btn" aria-label="搜索"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary nav-btn">获取方案</a>
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1>党政主题教育馆</h1>
+            <p>设计建设党政主题教育展厅，融合现代科技与传统元素</p>
+        </div>
+    </section>
+
+    <section class="section project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="btn btn-outline btn-back"><i class="fas fa-arrow-left"></i> 返回项目案例</a>
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-section">
+                        <h3>项目背景</h3>
+                        <p>为加强党政教育，某地方政府计划建设一个现代化的主题教育馆，用于开展党性教育、党风廉政建设和红色文化传承。</p>
+                        <p>展馆需要庄严大气，同时融入现代科技手段，增强教育效果和参观体验，满足不同年龄段党员干部的学习需求。</p>
+                        <img src="images/project5-1.jpg" alt="主题教育馆外观" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目亮点</h3>
+                        <p>1. <strong>庄严氛围</strong>：设计采用红色为主色调，结合党徽、国旗等元素，营造庄严崇高的教育氛围。</p>
+                        <p>2. <strong>智能导览</strong>：配备智能语音导览系统，参观者可以通过手机收听讲解，支持多语言选择。</p>
+                        <p>3. <strong>互动体验</strong>：设置VR党史体验区、互动答题系统和电子留言墙，增强参与感和互动性。</p>
+                        <p>4. <strong>多媒体展示</strong>：运用投影映射、电子沙盘、弧幕影院等技术，生动展示党的历史和成就。</p>
+                        <img src="images/project5-2.jpg" alt="VR体验区" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目收获</h3>
+                        <p>1. <strong>教育效果显著</strong>：开馆后成为当地党政教育的重要基地，接待了大量党员干部参观学习。</p>
+                        <p>2. <strong>上级表彰</strong>：项目获得上级部门的高度认可，被评为示范性党建教育基地。</p>
+                        <p>3. <strong>社会效益</strong>：提升了党政教育的吸引力和感染力，促进了红色文化的传播。</p>
+                        <p>4. <strong>经验积累</strong>：在党政主题展馆设计方面积累了丰富经验，为后续类似项目奠定了基础。</p>
+                        <img src="images/project5-3.jpg" alt="领导参观" class="project-image">
+                    </div>
+                </div>
+                <div class="project-sidebar">
+                    <div class="project-section">
+                        <h3>项目信息</h3>
+                        <p><strong>客户：</strong>地方政府部门</p>
+                        <p><strong>地点：</strong>市级行政中心</p>
+                        <p><strong>时间：</strong>2023年1月</p>
+                        <p><strong>面积：</strong>1500平方米</p>
+                        <p><strong>服务内容：</strong>展馆设计、内容策划、多媒体制作、施工建设</p>
+                    </div>
+                    <div class="project-section">
+                        <h3>相关项目</h3>
+                        <ul>
+                            <li><a href="project4.html">历史文化博物馆</a></li>
+                            <li><a href="project6.html">科技创新主题馆</a></li>
+                            <li><a href="project1.html">2023上海国际汽车展</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 厦门天其展览服务有限公司. 保留所有权利.</p>
+            <p>沪ICP备12345678号</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            window.addEventListener('scroll', () => {
+                backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

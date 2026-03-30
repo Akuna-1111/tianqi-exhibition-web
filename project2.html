@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球科技峰会 - 天其展览</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail { padding: 80px 0; }
+        .project-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('../images/project2-hero.jpg');
+            background-size: cover; background-position: center; color: white; padding: 100px 0; text-align: center; margin-bottom: 50px;
+        }
+        .project-hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .project-hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        .project-content { display: flex; flex-wrap: wrap; gap: 50px; margin-top: 50px; }
+        .project-info { flex: 1; min-width: 300px; }
+        .project-sidebar { flex: 0 0 300px; position: sticky; top: 100px; height: fit-content; }
+        .project-section { margin-bottom: 40px; }
+        .project-section h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--black); border-left: 4px solid var(--primary-red); padding-left: 15px; }
+        .project-section p { line-height: 1.8; color: var(--gray-dark); margin-bottom: 20px; }
+        .project-image { width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .back-to-top {
+            position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background-color: var(--primary-red); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; z-index: 1000;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3); transition: all 0.3s ease; display: none;
+        }
+        .back-to-top:hover { background-color: var(--dark-red); transform: translateY(-5px); }
+        .btn-back { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="天其展览 Logo" class="logo-img"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html#intro">企业简介</a></li>
+                    <li><a href="index.html#partners">合作伙伴</a></li>
+                    <li><a href="index.html#qualifications">资质荣誉</a></li>
+                    <li><a href="index.html#projects">项目案例</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="搜索..." class="search-input">
+                    <button class="search-btn" aria-label="搜索"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary nav-btn">获取方案</a>
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1>全球科技峰会</h1>
+            <p>为科技公司打造沉浸式产品发布舞台，运用全息投影技术</p>
+        </div>
+    </section>
+
+    <section class="section project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="btn btn-outline btn-back"><i class="fas fa-arrow-left"></i> 返回项目案例</a>
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-section">
+                        <h3>项目背景</h3>
+                        <p>全球科技峰会是年度最重要的科技行业盛会，汇聚了全球顶尖科技公司、创业者和投资者。我们的客户是一家领先的科技公司，计划在峰会上发布其革命性的新产品。</p>
+                        <p>客户需要一个能够体现其创新精神和科技实力的发布舞台，要求使用最先进的全息投影和互动技术，为观众带来沉浸式的体验。</p>
+                        <img src="images/project2-1.jpg" alt="科技峰会舞台" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目亮点</h3>
+                        <p>1. <strong>全息投影舞台</strong>：采用360度全息投影技术，在产品发布环节呈现震撼的视觉效果，让产品仿佛悬浮在空中。</p>
+                        <p>2. <strong>沉浸式体验</strong>：舞台设计成环形结构，观众可以围绕舞台观看，配合环绕声音响和智能灯光，创造沉浸式环境。</p>
+                        <p>3. <strong>互动控制</strong>：演讲者可以通过手势和语音控制投影内容，实现与技术的自然交互。</p>
+                        <p>4. <strong>模块化设计</strong>：舞台结构采用模块化设计，便于快速搭建和拆卸，适应不同场地需求。</p>
+                        <img src="images/project2-2.jpg" alt="全息投影效果" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目收获</h3>
+                        <p>1. <strong>媒体广泛报道</strong>：发布会获得了全球科技媒体的广泛报道，客户新产品发布成为峰会最大亮点。</p>
+                        <p>2. <strong>技术创新奖</strong>：该项目荣获年度最佳科技活动设计奖，肯定了我们在科技活动设计方面的创新能力。</p>
+                        <p>3. <strong>客户长期合作</strong>：基于此次成功合作，客户与我们签订了长期合作协议，负责其未来所有大型活动的设计搭建。</p>
+                        <p>4. <strong>行业标杆</strong>：该项目成为科技行业活动设计的新标杆，吸引了多家科技公司前来咨询合作。</p>
+                        <img src="images/project2-3.jpg" alt="媒体采访" class="project-image">
+                    </div>
+                </div>
+                <div class="project-sidebar">
+                    <div class="project-section">
+                        <h3>项目信息</h3>
+                        <p><strong>客户：</strong>国际科技公司</p>
+                        <p><strong>地点：</strong>深圳国际会展中心</p>
+                        <p><strong>时间：</strong>2023年9月</p>
+                        <p><strong>面积：</strong>800平方米</p>
+                        <p><strong>服务内容：</strong>舞台设计、全息投影、灯光音响、互动技术、现场执行</p>
+                    </div>
+                    <div class="project-section">
+                        <h3>相关项目</h3>
+                        <ul>
+                            <li><a href="project1.html">2023上海国际汽车展</a></li>
+                            <li><a href="project3.html">集团品牌展厅</a></li>
+                            <li><a href="project4.html">历史文化博物馆</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 厦门天其展览服务有限公司. 保留所有权利.</p>
+            <p>沪ICP备12345678号</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            window.addEventListener('scroll', () => {
+                backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

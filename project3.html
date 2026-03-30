@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集团品牌展厅 - 天其展览</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail { padding: 80px 0; }
+        .project-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('../images/project3-hero.jpg');
+            background-size: cover; background-position: center; color: white; padding: 100px 0; text-align: center; margin-bottom: 50px;
+        }
+        .project-hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .project-hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        .project-content { display: flex; flex-wrap: wrap; gap: 50px; margin-top: 50px; }
+        .project-info { flex: 1; min-width: 300px; }
+        .project-sidebar { flex: 0 0 300px; position: sticky; top: 100px; height: fit-content; }
+        .project-section { margin-bottom: 40px; }
+        .project-section h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--black); border-left: 4px solid var(--primary-red); padding-left: 15px; }
+        .project-section p { line-height: 1.8; color: var(--gray-dark); margin-bottom: 20px; }
+        .project-image { width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .back-to-top {
+            position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background-color: var(--primary-red); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; z-index: 1000;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3); transition: all 0.3s ease; display: none;
+        }
+        .back-to-top:hover { background-color: var(--dark-red); transform: translateY(-5px); }
+        .btn-back { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="天其展览 Logo" class="logo-img"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html#intro">企业简介</a></li>
+                    <li><a href="index.html#partners">合作伙伴</a></li>
+                    <li><a href="index.html#qualifications">资质荣誉</a></li>
+                    <li><a href="index.html#projects">项目案例</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="搜索..." class="search-input">
+                    <button class="search-btn" aria-label="搜索"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary nav-btn">获取方案</a>
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1>集团品牌展厅</h1>
+            <p>设计建造1000㎡企业品牌展厅，展现企业发展历程与成就</p>
+        </div>
+    </section>
+
+    <section class="section project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="btn btn-outline btn-back"><i class="fas fa-arrow-left"></i> 返回项目案例</a>
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-section">
+                        <h3>项目背景</h3>
+                        <p>该集团是一家多元化跨国企业，为庆祝成立30周年，计划在其总部大楼建设一个永久性品牌展厅，用于展示企业发展历程、核心业务和企业文化。</p>
+                        <p>展厅需要体现集团的国际化视野、创新精神和行业领导地位，同时为访客提供互动体验和深入了解企业的机会。</p>
+                        <img src="images/project3-1.jpg" alt="品牌展厅入口" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目亮点</h3>
+                        <p>1. <strong>时间轴展示</strong>：通过互动时间轴展示集团30年发展历程，重要里程碑通过多媒体形式呈现。</p>
+                        <p>2. <strong>业务体验区</strong>：为集团各业务板块设计独立的体验区，运用VR、AR技术让访客体验产品和服务。</p>
+                        <p>3. <strong>文化墙</strong>：设计一面动态文化墙，展示企业价值观、员工风采和社会责任成果。</p>
+                        <p>4. <strong>智能导览</strong>：配备智能导览系统，访客可以通过平板电脑或手机获取个性化导览内容。</p>
+                        <img src="images/project3-2.jpg" alt="互动体验区" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目收获</h3>
+                        <p>1. <strong>客户高度满意</strong>：展厅获得了集团高层和员工的高度评价，成为企业对外展示的重要窗口。</p>
+                        <p>2. <strong>提升企业形象</strong>：展厅投入使用后，接待了众多政府领导、合作伙伴和媒体参观，显著提升了企业形象。</p>
+                        <p>3. <strong>长期维护合作</strong>：与集团签订了长期维护和内容更新合作协议，建立了稳定的合作关系。</p>
+                        <p>4. <strong>行业示范项目</strong>：该项目成为企业展厅设计的示范项目，吸引了多家大型企业前来考察学习。</p>
+                        <img src="images/project3-3.jpg" alt="展厅内部" class="project-image">
+                    </div>
+                </div>
+                <div class="project-sidebar">
+                    <div class="project-section">
+                        <h3>项目信息</h3>
+                        <p><strong>客户：</strong>跨国集团公司</p>
+                        <p><strong>地点：</strong>北京总部大楼</p>
+                        <p><strong>时间：</strong>2023年6月</p>
+                        <p><strong>面积：</strong>1000平方米</p>
+                        <p><strong>服务内容：</strong>展厅设计、多媒体制作、施工搭建、智能系统、内容策划</p>
+                    </div>
+                    <div class="project-section">
+                        <h3>相关项目</h3>
+                        <ul>
+                            <li><a href="project1.html">2023上海国际汽车展</a></li>
+                            <li><a href="project2.html">全球科技峰会</a></li>
+                            <li><a href="project4.html">历史文化博物馆</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 厦门天其展览服务有限公司. 保留所有权利.</p>
+            <p>沪ICP备12345678号</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            window.addEventListener('scroll', () => {
+                backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

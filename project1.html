@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023上海国际汽车展 - 天其展览</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {
+            padding: 80px 0;
+        }
+        .project-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('../images/project1-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .project-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        .project-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .project-sidebar {
+            flex: 0 0 300px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        .project-section {
+            margin-bottom: 40px;
+        }
+        .project-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--black);
+            border-left: 4px solid var(--primary-red);
+            padding-left: 15px;
+        }
+        .project-section p {
+            line-height: 1.8;
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+        }
+        .project-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-red);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+            transition: all 0.3s ease;
+        }
+        .back-to-top:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-5px);
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="天其展览 Logo" class="logo-img">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#intro">企业简介</a></li>
+                    <li><a href="index.html#partners">合作伙伴</a></li>
+                    <li><a href="index.html#qualifications">资质荣誉</a></li>
+                    <li><a href="index.html#projects">项目案例</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="搜索..." class="search-input">
+                    <button class="search-btn" aria-label="搜索">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary nav-btn">获取方案</a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 项目详情 -->
+    <section class="project-hero">
+        <div class="container">
+            <h1>2023上海国际汽车展</h1>
+            <p>为知名汽车品牌设计搭建2000㎡展台，融合科技与艺术元素</p>
+        </div>
+    </section>
+
+    <section class="section project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="btn btn-outline btn-back"><i class="fas fa-arrow-left"></i> 返回项目案例</a>
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-section">
+                        <h3>项目背景</h3>
+                        <p>2023上海国际汽车展是全球汽车行业的重要盛会，吸引了来自世界各地的汽车制造商和供应商参展。我们的客户是一家国际知名汽车品牌，希望在此次展会上展示其最新电动汽车系列和创新技术。</p>
+                        <p>客户要求展台设计必须体现品牌的高端科技感和环保理念，同时能够容纳大量参观者，并提供舒适的互动体验空间。展台总面积2000平方米，是展会中最大的展台之一。</p>
+                        <img src="images/project1-1.jpg" alt="汽车展展台全景" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目亮点</h3>
+                        <p>1. <strong>创新设计</strong>：展台采用流线型设计，灵感来源于电动汽车的动感线条，整体造型现代而富有科技感。主结构使用可回收材料，体现环保理念。</p>
+                        <p>2. <strong>互动体验区</strong>：设置了VR驾驶模拟器、全息投影技术展示和智能互动屏幕，让参观者亲身体验汽车的智能功能和驾驶乐趣。</p>
+                        <p>3. <strong>灯光效果</strong>：采用智能LED灯光系统，可以根据展示内容和音乐节奏变化，营造沉浸式的视觉体验。</p>
+                        <p>4. <strong>多功能空间</strong>：展台包含产品展示区、技术讲解区、商务洽谈区和媒体采访区，每个区域都有独立的功能又相互衔接。</p>
+                        <img src="images/project1-2.jpg" alt="互动体验区" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目收获</h3>
+                        <p>1. <strong>客户高度评价</strong>：展台设计获得了客户和参观者的一致好评，展会期间接待了超过10万人次参观，达成了多项商务合作意向。</p>
+                        <p>2. <strong>行业认可</strong>：该项目荣获2023年国际展览设计金奖，被多家行业媒体专题报道。</p>
+                        <p>3. <strong>技术积累</strong>：通过此次项目，我们的团队在大规模展台设计、智能互动技术和环保材料应用方面积累了宝贵经验。</p>
+                        <p>4. <strong>品牌提升</strong>：成功展示了天其展览在大型国际展会设计搭建方面的专业能力，进一步提升了公司在行业内的知名度。</p>
+                        <img src="images/project1-3.jpg" alt="获奖证书" class="project-image">
+                    </div>
+                </div>
+                <div class="project-sidebar">
+                    <div class="project-section">
+                        <h3>项目信息</h3>
+                        <p><strong>客户：</strong>国际知名汽车品牌</p>
+                        <p><strong>地点：</strong>上海国家会展中心</p>
+                        <p><strong>时间：</strong>2023年4月</p>
+                        <p><strong>面积：</strong>2000平方米</p>
+                        <p><strong>服务内容：</strong>展台设计、结构搭建、灯光音响、互动技术、现场管理</p>
+                    </div>
+                    <div class="project-section">
+                        <h3>相关项目</h3>
+                        <ul>
+                            <li><a href="project2.html">全球科技峰会</a></li>
+                            <li><a href="project3.html">集团品牌展厅</a></li>
+                            <li><a href="project4.html">历史文化博物馆</a></li>
+                        </ul>
+                    </div>
+                    <div class="project-section">
+                        <h3>分享项目</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-weixin"></i></a>
+                            <a href="#"><i class="fab fa-weibo"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 厦门天其展览服务有限公司. 保留所有权利.</p>
+            <p>沪ICP备12345678号</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 返回顶部功能
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = 'flex';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+
+            // 初始隐藏
+            backToTop.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

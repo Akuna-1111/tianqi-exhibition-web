@@ -178,4 +178,235 @@ document.addEventListener('DOMContentLoaded', function() {
         //     });
         // }
     }
+
+    // 近期业务活动轮播
+    const newsSlides = document.querySelectorAll('.news-slide');
+    const newsDots = document.querySelectorAll('.news-dot');
+    const newsPrevBtn = document.querySelector('.news-prev');
+    const newsNextBtn = document.querySelector('.news-next');
+
+    if (newsSlides.length > 0) {
+        let currentNewsSlide = 1;
+        const totalNewsSlides = newsSlides.length;
+
+        // 初始化显示第一张幻灯片
+        updateNewsCarousel();
+
+        // 切换幻灯片函数
+        function goToNewsSlide(slideIndex) {
+            if (slideIndex < 1) slideIndex = totalNewsSlides;
+            if (slideIndex > totalNewsSlides) slideIndex = 1;
+            currentNewsSlide = slideIndex;
+            updateNewsCarousel();
+        }
+
+        // 更新轮播显示
+        function updateNewsCarousel() {
+            // 更新幻灯片
+            newsSlides.forEach((slide, index) => {
+                if (index + 1 === currentNewsSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            // 更新分页指示器
+            newsDots.forEach((dot, index) => {
+                if (index + 1 === currentNewsSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // 上一张按钮事件
+        if (newsPrevBtn) {
+            newsPrevBtn.addEventListener('click', function() {
+                goToNewsSlide(currentNewsSlide - 1);
+            });
+        }
+
+        // 下一张按钮事件
+        if (newsNextBtn) {
+            newsNextBtn.addEventListener('click', function() {
+                goToNewsSlide(currentNewsSlide + 1);
+            });
+        }
+
+        // 分页指示器点击事件
+        if (newsDots.length > 0) {
+            newsDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    goToNewsSlide(slideIndex);
+                });
+            });
+        }
+
+        // 自动轮播
+        let newsAutoSlideInterval = setInterval(() => {
+            goToNewsSlide(currentNewsSlide + 1);
+        }, 4000); // 每4秒自动切换
+
+        // 鼠标悬停时暂停自动轮播
+        const newsCarousel = document.querySelector('.news-carousel');
+        if (newsCarousel) {
+            newsCarousel.addEventListener('mouseenter', () => {
+                clearInterval(newsAutoSlideInterval);
+            });
+
+            newsCarousel.addEventListener('mouseleave', () => {
+                newsAutoSlideInterval = setInterval(() => {
+                    goToNewsSlide(currentNewsSlide + 1);
+                }, 4000);
+            });
+        }
+    }
+
+    // 意向合作模态框功能
+    const cooperationBtn = document.getElementById('cooperationBtn');
+    const cooperationModal = document.getElementById('cooperationModal');
+    const modalClose = document.getElementById('modalClose');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const cooperationForm = document.getElementById('cooperationForm');
+
+    if (cooperationBtn && cooperationModal) {
+        // 打开模态框
+        cooperationBtn.addEventListener('click', () => {
+            cooperationModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+        });
+
+        // 关闭模态框
+        const closeModal = () => {
+            cooperationModal.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+
+        if (modalClose) modalClose.addEventListener('click', closeModal);
+        if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+        // 点击模态框外部关闭
+        cooperationModal.addEventListener('click', (e) => {
+            if (e.target === cooperationModal) {
+                closeModal();
+            }
+        });
+
+        // 表单提交
+        if (cooperationForm) {
+            cooperationForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // 收集表单数据
+                const formData = new FormData(cooperationForm);
+                const data = Object.fromEntries(formData);
+
+                // 这里应该发送到后端API
+                // 由于没有后端，我们模拟提交并显示提示
+                try {
+                    // 模拟API调用
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+
+                    // 显示成功消息
+                    alert('提交成功！我们会尽快与您联系。');
+                    cooperationForm.reset();
+                    closeModal();
+
+                    // 在实际应用中，这里应该发送到服务器
+                    // fetch('/api/cooperation', {
+                    //     method: 'POST',
+                    //     headers: { 'Content-Type': 'application/json' },
+                    //     body: JSON.stringify(data)
+                    // })
+                } catch (error) {
+                    alert('提交失败，请稍后重试。');
+                    console.error('Form submission error:', error);
+                }
+            });
+        }
+    }
+
+    // 搜索功能
+    const searchInput = document.querySelector('.search-input');
+    const searchBtn = document.querySelector('.search-btn');
+
+    if (searchInput && searchBtn) {
+        // 项目数据索引
+        const projectIndex = [
+            {
+                title: '2023上海国际汽车展',
+                description: '为知名汽车品牌设计搭建2000㎡展台，融合科技与艺术元素',
+                url: 'project1.html',
+                keywords: ['汽车', '展台', '科技', '艺术', '上海']
+            },
+            {
+                title: '全球科技峰会',
+                description: '为科技公司打造沉浸式产品发布舞台，运用全息投影技术',
+                url: 'project2.html',
+                keywords: ['科技', '峰会', '全息投影', '沉浸式', '产品发布']
+            },
+            {
+                title: '集团品牌展厅',
+                description: '设计建造1000㎡企业品牌展厅，展现企业发展历程与成就',
+                url: 'project3.html',
+                keywords: ['品牌展厅', '企业', '展厅', '历程', '成就']
+            },
+            {
+                title: '历史文化博物馆',
+                description: '策划设计博物馆常设展览，运用多媒体交互技术增强体验',
+                url: 'project4.html',
+                keywords: ['博物馆', '历史', '文化', '多媒体', '交互']
+            },
+            {
+                title: '党政主题教育馆',
+                description: '设计建设党政主题教育展厅，融合现代科技与传统元素',
+                url: 'project5.html',
+                keywords: ['党政', '教育馆', '主题教育', '科技', '传统']
+            },
+            {
+                title: '科技创新主题馆',
+                description: '打造互动式科技主题体验馆，运用VR/AR技术增强参观体验',
+                url: 'project6.html',
+                keywords: ['科技', '创新', '主题馆', 'VR', 'AR', '互动']
+            }
+        ];
+
+        // 搜索函数
+        const performSearch = (query) => {
+            if (!query.trim()) return;
+            const normalizedQuery = query.toLowerCase().trim();
+
+            // 查找匹配的项目
+            const matches = projectIndex.filter(project => {
+                const titleMatch = project.title.toLowerCase().includes(normalizedQuery);
+                const descMatch = project.description.toLowerCase().includes(normalizedQuery);
+                const keywordMatch = project.keywords.some(keyword =>
+                    keyword.toLowerCase().includes(normalizedQuery)
+                );
+                return titleMatch || descMatch || keywordMatch;
+            });
+
+            if (matches.length > 0) {
+                // 跳转到第一个匹配的项目页面
+                window.location.href = matches[0].url;
+            } else {
+                alert('未找到相关项目，请尝试其他关键词。');
+            }
+        };
+
+        // 按钮点击搜索
+        searchBtn.addEventListener('click', () => {
+            performSearch(searchInput.value);
+        });
+
+        // 回车键搜索
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch(searchInput.value);
+            }
+        });
+    }
 });

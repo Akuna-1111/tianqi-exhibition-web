@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史文化博物馆 - 天其展览</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .project-detail { padding: 80px 0; }
+        .project-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('../images/project4-hero.jpg');
+            background-size: cover; background-position: center; color: white; padding: 100px 0; text-align: center; margin-bottom: 50px;
+        }
+        .project-hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .project-hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+        .project-content { display: flex; flex-wrap: wrap; gap: 50px; margin-top: 50px; }
+        .project-info { flex: 1; min-width: 300px; }
+        .project-sidebar { flex: 0 0 300px; position: sticky; top: 100px; height: fit-content; }
+        .project-section { margin-bottom: 40px; }
+        .project-section h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--black); border-left: 4px solid var(--primary-red); padding-left: 15px; }
+        .project-section p { line-height: 1.8; color: var(--gray-dark); margin-bottom: 20px; }
+        .project-image { width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .back-to-top {
+            position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background-color: var(--primary-red); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; z-index: 1000;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3); transition: all 0.3s ease; display: none;
+        }
+        .back-to-top:hover { background-color: var(--dark-red); transform: translateY(-5px); }
+        .btn-back { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="天其展览 Logo" class="logo-img"></a>
+                <ul class="nav-links">
+                    <li><a href="index.html#intro">企业简介</a></li>
+                    <li><a href="index.html#partners">合作伙伴</a></li>
+                    <li><a href="index.html#qualifications">资质荣誉</a></li>
+                    <li><a href="index.html#projects">项目案例</a></li>
+                    <li><a href="index.html#contact">联系我们</a></li>
+                </ul>
+                <div class="nav-search">
+                    <input type="text" placeholder="搜索..." class="search-input">
+                    <button class="search-btn" aria-label="搜索"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary nav-btn">获取方案</a>
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1>历史文化博物馆</h1>
+            <p>策划设计博物馆常设展览，运用多媒体交互技术增强体验</p>
+        </div>
+    </section>
+
+    <section class="section project-detail">
+        <div class="container">
+            <a href="index.html#projects" class="btn btn-outline btn-back"><i class="fas fa-arrow-left"></i> 返回项目案例</a>
+            <div class="project-content">
+                <div class="project-info">
+                    <div class="project-section">
+                        <h3>项目背景</h3>
+                        <p>该博物馆是省级重点文化项目，旨在展示地区历史文化和发展成就。项目包括常设展览设计、文物展示、多媒体互动和参观流线规划。</p>
+                        <p>展览需要平衡历史严谨性和观众体验，让文物“活”起来，通过现代技术吸引年轻观众，同时满足学术研究需求。</p>
+                        <img src="images/project4-1.jpg" alt="博物馆外观" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目亮点</h3>
+                        <p>1. <strong>数字化展示</strong>：对珍贵文物进行3D扫描和数字化重建，观众可以通过触摸屏多角度查看文物细节。</p>
+                        <p>2. <strong>沉浸式场景</strong>：复原历史场景，结合声光电效果，让观众仿佛穿越时空。</p>
+                        <p>3. <strong>互动学习</strong>：设计互动游戏和问答系统，让青少年在游戏中学习历史知识。</p>
+                        <p>4. <strong>无障碍设计</strong>：充分考虑残障人士需求，提供盲文介绍、手语视频和轮椅友好通道。</p>
+                        <img src="images/project4-2.jpg" alt="沉浸式场景" class="project-image">
+                    </div>
+                    <div class="project-section">
+                        <h3>项目收获</h3>
+                        <p>1. <strong>文化影响力</strong>：博物馆开馆后成为当地文化地标，吸引了大量游客和学校团体参观。</p>
+                        <p>2. <strong>专业认可</strong>：项目获得全国博物馆陈列展览精品奖，受到文博专家好评。</p>
+                        <p>3. <strong>社会效益</strong>：提升了公众对地方历史文化的认知，促进了文化传承和教育。</p>
+                        <p>4. <strong>技术积累</strong>：在文物数字化和博物馆互动技术方面积累了宝贵经验。</p>
+                        <img src="images/project4-3.jpg" alt="观众参观" class="project-image">
+                    </div>
+                </div>
+                <div class="project-sidebar">
+                    <div class="project-section">
+                        <h3>项目信息</h3>
+                        <p><strong>客户：</strong>省级博物馆</p>
+                        <p><strong>地点：</strong>省会城市文化区</p>
+                        <p><strong>时间：</strong>2023年3月</p>
+                        <p><strong>面积：</strong>3000平方米</p>
+                        <p><strong>服务内容：</strong>展览策划、展示设计、多媒体制作、施工管理</p>
+                    </div>
+                    <div class="project-section">
+                        <h3>相关项目</h3>
+                        <ul>
+                            <li><a href="project3.html">集团品牌展厅</a></li>
+                            <li><a href="project5.html">党政主题教育馆</a></li>
+                            <li><a href="project6.html">科技创新主题馆</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 厦门天其展览服务有限公司. 保留所有权利.</p>
+            <p>沪ICP备12345678号</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            window.addEventListener('scroll', () => {
+                backToTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
