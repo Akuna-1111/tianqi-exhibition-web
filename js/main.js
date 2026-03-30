@@ -51,4 +51,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // 合作伙伴分页切换
+    const pageDots = document.querySelectorAll('.page-dot');
+    if (pageDots.length > 0) {
+        pageDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const page = this.getAttribute('data-page');
+
+                // 更新分页指示器
+                pageDots.forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+
+                // 切换显示对应的logo页
+                for (let i = 1; i <= 3; i++) {
+                    const pageElement = document.getElementById(`partnersPage${i}`);
+                    if (pageElement) {
+                        pageElement.style.display = (i == page) ? 'grid' : 'none';
+                    }
+                }
+            });
+        });
+    }
 });
