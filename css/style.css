@@ -766,13 +766,19 @@ body {
     flex-wrap: wrap;
     gap: 60px;
     margin-top: 50px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .contact-info {
     flex: 1;
     min-width: 300px;
 }
+
+
+
+
+
+
 
 .contact-info h3 {
     font-size: 1.8rem;
@@ -819,7 +825,8 @@ body {
 }
 
 .contact-qr {
-    flex: 0 0 auto;
+    flex: 1;
+    min-width: 200px;
     text-align: center;
 }
 
@@ -903,14 +910,14 @@ body {
     font-weight: 500;
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(211, 47, 47, 0.4);
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
     text-decoration: none;
     overflow: hidden;
     position: relative;
 }
 
 .floating-btn i {
-    transition: opacity 0.3s ease;
+    transition: opacity 0.15s ease;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -919,16 +926,21 @@ body {
 
 .floating-btn span {
     opacity: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.7rem;
     line-height: 1.1;
     text-align: center;
     width: 100%;
     height: 100%;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.15s ease;
     white-space: normal;
     padding: 2px;
     box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .floating-btn:hover {
@@ -1186,6 +1198,10 @@ body {
     .contact-info {
         text-align: center;
     }
+
+    .social-links {
+        justify-content: center;
+    }
 }
 
 /* 近期活动列表 */
@@ -1313,6 +1329,10 @@ body {
         padding: 4px 10px;
         font-size: 0.7rem;
         margin-left: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
     /* 轮播按钮在更小屏幕调整 */
