@@ -21,15 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const navItems = document.querySelectorAll('.nav-links a');
         navItems.forEach(item => {
             item.addEventListener('click', function() {
-                navLinks.classList.remove('show');
-                // 恢复菜单图标
-                const icon = menuToggle.querySelector('i');
-                if (icon.classList.contains('fa-times')) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
+                closeMenu();
             });
         });
+
+        // 点击导航栏空白区域关闭菜单
+        navLinks.addEventListener('click', function(e) {
+            if (e.target === navLinks) {
+                closeMenu();
+            }
+        });
+
+        function closeMenu() {
+            navLinks.classList.remove('show');
+            const icon = menuToggle.querySelector('i');
+            if (icon.classList.contains('fa-times')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
     }
 
     // 平滑滚动（如果浏览器不支持CSS scroll-behavior）
